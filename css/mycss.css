@@ -1,0 +1,153 @@
+.tf-slideshow{
+  height: 85vh !important;
+  display: flex;
+  align-items: center;
+  padding: 0 !important;
+  /*margin: -8rem 0 0 0rem !important;*/
+}
+
+.tf-slideshow .wrap-slider{
+  height: 85vh !important;
+}
+
+
+.swiper-slide .wrap-slider {
+  background-color: #000 !important;
+}
+
+.swiper-slide .wrap-slider img{
+  opacity: 0.2;
+  filter: blur(1px);
+}
+
+/*#seloko{
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: column;
+  margin: 0 auto;
+}*/
+
+.container-allbooks{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.allbooks{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  flex-flow: row-wrap;
+  max-width: 75%;
+}
+
+.allbooks img{
+  height:15rem;
+  /*height: 15rem;
+  width: 10rem;
+  background-color: #fff;*/
+/*  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;*/
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.allbooks div{
+  transition: all 500ms;
+}
+
+.allbooks div:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .allbooks{
+    max-width: 100%;
+  }
+}
+
+.img-container,.img-container2{
+  position: relative;
+  display: inline-block;
+}
+
+
+.img-container::before, .img-container2::before{
+  opacity:0.8;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  width: 80%;
+  height: 2rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.img-container::before{
+  content: "Em Oferta %";
+  background-color: #dc3545; /* Vermelho Bootstrap */
+}
+
+.img-container2::before{
+  content: "Oferta";
+  background-color: #ff6600; /* Vermelho Bootstrap */
+}
+
+
+.lmt-fat{
+  container: container / inline-size;
+
+  width: 100%; /* demo only */
+}
+
+.fat-d{
+
+}
+
+
+.limit-text {
+  display: inline-block;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: clip;
+}
+
+.box-icon-buy:hover .icon-buy{
+    color: white;
+}
+
+.icon-buy{
+  height: 1.5rem !important;
+  width: 1.2rem !important;
+  color: black;
+
+}
+
+.link-title{
+  
+  font-weight: 500 !important;
+  font-size: 1.1rem;
+    line-height: 20px;
+    margin-top: 0.7rem;
+
+}
+
+.random-flex{
+  display: flex;
+}
+/*.icon-buy:hover{
+    color:white;
+}*/
