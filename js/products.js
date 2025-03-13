@@ -162,4 +162,13 @@ var books =
                 cat:"enterprise",
                 bestSeller:true  //o proximo é 19
             }
-        ]
+        ];
+
+        function redirect(url){
+            var win = window.open(url, '_blank');
+            win.focus();
+        }        
+       
+        var clicked=[false,-1]
+        var needBeBest = false;
+        var limit= 11;
