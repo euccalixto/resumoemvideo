@@ -160,9 +160,9 @@ var books =
                 image:"16"+".jpg",
                 offer:1,
                 cat:"enterprise",
-                bestSeller:true  //o proximo é 19
+                bestSeller:true  
             }
-        ];
+        ];//o proximo é 19
 
         function redirect(url){
             var win = window.open(url, '_blank');

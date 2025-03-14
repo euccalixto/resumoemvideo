@@ -84,7 +84,7 @@
             <div class="container">
                 <div class="tf-shop-control grid-3 align-items-center">
                     <div class="tf-control-filter">
-                        <a href="#filterShop" data-bs-toggle="offcanvas" aria-controls="offcanvasLeft" class="tf-btn-filter"><span class="icon icon-filter"></span><span class="text">Filter</span></a>
+                        <a href="#filterShop" data-bs-toggle="offcanvas" aria-controls="offcanvasLeft" class="tf-btn-filter"><span class="icon icon-filter"></span><span class="text">Categoria</span></a>
                     </div>
                     <ul class="tf-control-layout d-flex justify-content-center">
                         <li class="tf-view-layout-switch sw-layout-2" data-value-grid="grid-2">
@@ -756,7 +756,7 @@
             <header class="canvas-header">
                 <div class="filter-icon">
                     <span class="icon icon-filter"></span>
-                    <span>Filter</span>
+                    <span>Escolha</span>
                 </div>
                 <span class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></span>
             </header>
@@ -1776,6 +1776,7 @@
     <script type="text/javascript" src="js/multiple-modal.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript">
+         console.clear();
         function redirect(url){
             var win = window.open(url, '_blank');
             win.focus();
@@ -1806,7 +1807,7 @@
 
         function updateProducts(bk){ 
             let sec0=``
-            console.log(bk) 
+            //console.log(bk) 
             if(bk != false){
                 
                 sec0=`                      <div class="card-product" onclick="redirect('${bk.link}')">
@@ -1831,21 +1832,26 @@
                 cat.forEach( (c,iCat) => {
                     if(clicked[1]==-1){
                         iOp=iCat;
+                        console.log('passou aqui antes',c.cat)
                     }
 
                     let count=0;
+
                     let content=``;
+
                     books.forEach((b,i) => {
                         if(needBeBest==true){
                             relativeComp= b.bestSeller;
                         }else{
                             relativeComp= true;
                         }
-
-                        if(count<limit){
-                            count=count+1;
-                            if(c.cat == b.cat && b.cat == cat[iOp].cat && relativeComp){
+                        console.log(c.cat,b.cat)
+                        
                             
+
+                        if(c.cat == b.cat && b.cat == cat[iOp].cat && relativeComp){
+                            if(count<limit){
+                               
                                 sec0= sec0 + `<div class="card-product" onclick="redirect('${b.link}')">
                                                 <div class="card-product-wrapper">
                                                     <a class="product-img">
@@ -1861,9 +1867,12 @@
                                                     <!--<span class="price">$16.95</span> -->
                                                 </div>
                                             </div>`;
-                            }
 
+                            }
+                            count=count+1;
                         }
+
+                        
                     })
                 })   
             }
