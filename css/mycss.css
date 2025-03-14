@@ -186,12 +186,13 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   flex-direction: column;
   width: 20rem;
 }
-.f p{
+.f span{
   width: 100%;
+  display: block;
 }
 
-.f p h5{
-  padding: 1rem;
+.f h5{
+  margin-bottom: 0.7rem;
 }
 
 .f a{
